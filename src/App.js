@@ -79,7 +79,7 @@ function App() {
   return (
     //   nested component
     <div className="App">
-      <header style={{background: color}} className="App-header">
+      <header style={{background: 'blue'}} className="App-header">
         <h1>Calculator</h1>
         <input style={{ borderWidth : 10}}  onChange={(event)=>{
           setUsername(event.target.value)
@@ -100,7 +100,7 @@ function App() {
         }}>Submit</button>
 
 
-        <div style={{background: color}}>{money}</div>
+        <div style={{background: 'blue'}}></div>
         <button onClick={click}>COUNT</button>
         <div>{demoIf(10)}</div>
         <div>{fruits.map((fruit, index) => <div> {index} : {fruit}</div>)}</div>
