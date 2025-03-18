@@ -1,19 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Test from "./Test";
-import Student from "./Student";
-import {use, useState} from "react";
+import {useState} from "react";
 // xoay quanh 1 kn la : component
 // 1 function component
 // 1 class component
 // hooks
-function Hello(props){
-  return(<div>
-    <h1 style={{background:'blue' , color :'green'}}>HELLO FUNCTION COMPONENT</h1>
-    <p style={{background:'blue'}}>This is p tag : {props.thamso}</p>
-    <p>This is p tag : {props.param2}</p>
-  </div>)
-}
+
 // JSX : Javascript XML !!!
 // camel case : quy tac dat ten bien : viet thuong chu cai dau tien,
 // viet hoa chu cai dau tien cua cac chu tiep theo
