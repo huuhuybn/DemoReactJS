@@ -99,6 +99,7 @@ function App() {
 
         }}>Submit</button>
 
+        <h1>Xin chaotest thu cap nhat</h1>
 
         <div style={{background: 'blue'}}></div>
         <button onClick={click}>COUNT</button>
