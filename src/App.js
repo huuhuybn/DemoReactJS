@@ -57,23 +57,14 @@ function App() {
   // money la ten bien state
   // setMoney la ham set gia tri cho money
   // 1000 la gia tri ban dau
-  const [money,setMoney] = useState(1000);
-  const [color,setColor] = useState("red");
-  const mau = ["red","yellow","green","blue"];
+
   //const [index,setIndex] = useState(0);
   // bien state duoc cap nhat thi app se refresh
   // khi state bi update thi App se bi re-render
   const click = ()=>{
     console.log(count)
-    setInterval(()=>{
-      setColor(getRandomHexColor)
-    },100000)
   }
 
-  function getRandomHexColor() {
-    let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    return randomColor;
-  }
   // onClick
   // onChange
   // onMouseEnter , onMouseLeave
