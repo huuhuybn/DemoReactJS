@@ -1,46 +1,125 @@
+/* Tổng thể */
 .App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+  background: #2c3e50;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Hiệu ứng lá rơi */
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+.falling-leaf {
+  position: absolute;
+  top: -10%;
+  z-index: 1;
+  animation: fall 6s linear infinite;
+  opacity: 0.8;
+}
+
+.falling-leaf:nth-child(odd) {
+  left: 10%;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+
+.falling-leaf:nth-child(even) {
+  left: 80%;
+  animation-duration: 5s;
+  animation-delay: 2s;
+}
+
+/* Hiệu ứng viễn tưởng - các điểm sáng */
+@keyframes sparkle {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.sparkle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #ffeb3b;
+  border-radius: 50%;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.sparkle:nth-child(odd) {
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+
+.sparkle:nth-child(even) {
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+
+/* Hiệu ứng nền */
+@keyframes space-background {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.App {
+  background: radial-gradient(circle, #1a1a2e, #16213e, #0f3460);
+  animation: space-background 30s infinite linear;
+}
+
+/* Các phần tử khác */
+h1, h2 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  color: #f39c12;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+section {
+  margin-bottom: 20px;
 }
 
-input {
-  border-color : blue;
-  border-width: 1px;
-  padding : 8px;
-  border-radius : 8px;
-  margin : 8px
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-.App-header {
-  background-color: #2f3133;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ul li {
+  margin: 5px 0;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+  text-decoration: none;
+  color: #3498db;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:hover {
+  text-decoration: underline;
 }
+
