@@ -65,7 +65,6 @@ function App() {
   // khi state bi update thi App se bi re-render
   const click = ()=>{
     console.log(count)
-    setMoney(money + 1000)
     setInterval(()=>{
       setColor(getRandomHexColor)
     },100000)
