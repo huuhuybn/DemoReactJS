@@ -1,121 +1,123 @@
-import React, { useEffect } from 'react';
+import React from "react";
 import './App.css';
 
 function App() {
-    // Tạo các lá rơi và ánh sáng
-    useEffect(() => {
-        const leafCount = 20; // Số lá rơi
-        const sparkleCount = 50; // Số điểm sáng
-
-        // Tạo các lá rơi
-        for (let i = 0; i < leafCount; i++) {
-            const leaf = document.createElement('div');
-            leaf.classList.add('falling-leaf');
-            document.body.appendChild(leaf);
-        }
-
-        // Tạo các điểm sáng
-        for (let i = 0; i < sparkleCount; i++) {
-            const sparkle = document.createElement('div');
-            sparkle.classList.add('sparkle');
-            sparkle.style.top = `${Math.random() * 100}vh`;
-            sparkle.style.left = `${Math.random() * 100}vw`;
-            document.body.appendChild(sparkle);
-        }
-    }, []);
-
     return (
-        <div className="App">
-            <h1>Nguyễn Hữu Huy</h1>
-            <p>Email: <a href="mailto:huuhuybn@gmail.com">huuhuybn@gmail.com</a></p>
-            <p>SĐT: 0913360468</p>
-
-            <section>
-                <h2>MỤC TIÊU NGHỀ NGHIỆP</h2>
-                <p>
-                    Là một lập trình viên với kinh nghiệm sâu sắc về ReactJS và các công nghệ frontend khác, tôi mong muốn phát triển kỹ năng lập trình và đóng góp vào các dự án sáng tạo. Tôi cũng có kinh nghiệm giảng dạy về AI và phát triển các ứng dụng thông minh, kết hợp với kiến thức vững về JavaScript, JSX, và các công cụ phát triển hiện đại như Babel và Webpack.
-                </p>
-            </section>
-
-            <section>
-                <h2>KỸ NĂNG CHUYÊN MÔN</h2>
-                <ul>
-                    <li>Frontend Development: ReactJS, JavaScript, JSX, HTML, CSS</li>
-                    <li>Hooks: Sử dụng useState, useEffect, và các hooks khác để quản lý state và lifecycle trong React</li>
-                    <li>ESLint & Code Quality: Kiến thức sử dụng ESLint để kiểm tra chất lượng mã nguồn và xử lý lỗi</li>
-                    <li>UI/UX: Tối ưu hóa giao diện người dùng với ReactJS, đảm bảo khả năng tương tác tốt và đáp ứng mọi kích thước màn hình</li>
-                    <li>API: Kết nối và xử lý dữ liệu từ APIs RESTful</li>
-                    <li>Tools: Webpack, Babel, Git, npm, Visual Studio Code</li>
-                    <li>Responsive Design: Thiết kế giao diện đáp ứng với các kích thước màn hình khác nhau</li>
-                    <li>AI Teaching: Kinh nghiệm giảng dạy về AI với các công nghệ và phương pháp học máy tiên tiến</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>KINH NGHIỆM LÀM VIỆC</h2>
-                <h3>Lập trình viên ReactJS - Freelance</h3>
-                <p>Thời gian: 2022 – nay</p>
-                <ul>
-                    <li>Phát triển các ứng dụng web với ReactJS và React Hooks, bao gồm quản lý state, xử lý sự kiện và tối ưu hóa giao diện người dùng.</li>
-                    <li>Sử dụng các công cụ build như Webpack và Babel để chuyển đổi mã nguồn và tối ưu hóa hiệu suất ứng dụng.</li>
-                    <li>Xử lý các lỗi phát sinh trong quá trình phát triển và đảm bảo mã nguồn tuân thủ các quy chuẩn chất lượng cao.</li>
-                    <li>Tạo các trang web tương tác với người dùng, bao gồm xử lý form và xác thực thông tin (username, password, v.v.).</li>
-                    <li>Sử dụng ESLint để đảm bảo mã nguồn không có lỗi và tuân thủ các quy tắc đặt tên biến và cấu trúc mã.</li>
-                </ul>
-
-                <h3>Giảng viên AI siêu cấp PRO MAX 16 - Giảng dạy AI</h3>
-                <p>Thời gian: 2020 – nay</p>
-                <ul>
-                    <li>Giảng dạy về các chủ đề AI cơ bản đến nâng cao, từ các thuật toán học máy đến các mô hình học sâu (Deep Learning).</li>
-                    <li>Phát triển các bài giảng và tài liệu học cho sinh viên, sử dụng AI để tối ưu hóa các bài toán phức tạp.</li>
-                    <li>Hướng dẫn sinh viên cách áp dụng AI vào các dự án thực tế và giải quyết các vấn đề trong lĩnh vực công nghệ.</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>DỰ ÁN TIÊU BIỂU</h2>
-                <h3>Ứng dụng Calculator với ReactJS</h3>
-                <ul>
-                    <li>Phát triển ứng dụng tính toán cơ bản sử dụng ReactJS với khả năng nhập và tính toán số học.</li>
-                    <li>Sử dụng các hooks (useState) để quản lý state cho các input và kết quả tính toán.</li>
-                    <li>Cải thiện giao diện người dùng với khả năng xử lý các sự kiện như click, nhập liệu và hiển thị kết quả.</li>
-                    <li>Kiểm tra và xử lý các dữ liệu nhập vào để đảm bảo chỉ nhận các giá trị hợp lệ (chỉ số).</li>
-                </ul>
-
-                <h3>Ứng dụng Quản lý Người Dùng với ReactJS</h3>
-                <ul>
-                    <li>Tạo ra giao diện người dùng cho việc nhập và xác thực thông tin người dùng.</li>
-                    <li>Sử dụng các component React để quản lý các form nhập liệu và xử lý dữ liệu theo nhu cầu.</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>HỌC VẤN</h2>
-                <h3>Cử nhân Công Nghệ Thông Tin</h3>
-                <p>Trường Đại học XYZ, 2017 – 2021</p>
-                <ul>
-                    <li>Tìm hiểu và nghiên cứu về lập trình web, cơ sở dữ liệu, và phát triển ứng dụng di động.</li>
-                    <li>Tham gia các dự án học thuật về AI và học máy.</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>NGÔN NGỮ & KỸ NĂNG</h2>
-                <ul>
-                    <li>Ngôn ngữ lập trình: JavaScript, HTML, CSS, SQL</li>
-                    <li>Công cụ: Git, npm, Visual Studio Code</li>
-                    <li>Ngoại ngữ: Tiếng Anh (Thông thạo)</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>SỞ THÍCH</h2>
-                <ul>
-                    <li>Đọc sách về AI và công nghệ</li>
-                    <li>Tham gia các hội thảo về lập trình và học máy</li>
-                    <li>Chia sẻ kiến thức qua các bài giảng và blog</li>
-                </ul>
-            </section>
+        <div className="background-image p-4">
+            <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+                <div className="flex">
+                    <div className="w-1/3 bg-gray-200 p-4">
+                        <div className="flex justify-center">
+                            <img
+                                alt="Profile picture of a person wearing glasses and a black coat"
+                                className="rounded-full border-4 border-white"
+                                height="150"
+                                src="https://storage.googleapis.com/a1aa/image/TmSQf1lFB8rRDSbj9hTMGeYxiQnVDMK1vz47EPXYAKc.jpg"
+                                width="150"
+                            />
+                        </div>
+                        <div className="mt-4">
+                            <h2 className="text-center text-xl font-bold">
+                                NGUYỄN ĐÌNH LẬP
+                            </h2>
+                            <p className="text-center text-sm text-gray-600">
+                                Nhân viên IT - Phần cứng - Mạng
+                            </p>
+                        </div>
+                        <div className="mt-4">
+                            <h3 className="text-lg font-semibold">CHỨNG CHỈ</h3>
+                            <p className="text-sm text-gray-600 mt-2">
+                                Chứng chỉ xây dựng mô hình ảo hóa
+                            </p>
+                            <p className="text-sm text-gray-600">
+                                Chứng chỉ xây dựng hệ thống giám sát
+                            </p>
+                        </div>
+                        <div className="mt-4">
+                            <h3 className="text-lg font-semibold">GIẢI THƯỞNG</h3>
+                            <p className="text-sm text-gray-600 mt-2">Nhân viên xuất sắc</p>
+                            <p className="text-sm text-gray-600">Giải nhất tin học văn phòng</p>
+                        </div>
+                        <div className="mt-4">
+                            <h3 className="text-lg font-semibold">SỞ THÍCH</h3>
+                            <p className="text-sm text-gray-600 mt-2">Thích xem phim</p>
+                            <p className="text-sm text-gray-600">Chơi thể thao</p>
+                        </div>
+                        <div className="mt-4">
+                            <h3 className="text-lg font-semibold">KỸ NĂNG</h3>
+                            <p className="text-sm text-gray-600 mt-2">Tin học văn phòng</p>
+                            <p className="text-sm text-gray-600">PHP</p>
+                        </div>
+                        <div className="mt-4">
+                            <h3 className="text-lg font-semibold">NGƯỜI THAM CHIẾU</h3>
+                            <p className="text-sm text-gray-600 mt-2">Ông Trần Hoàng Anh Quân</p>
+                            <p className="text-sm text-gray-600">
+                                Giám đốc công ty Hỗ trợ IT – Công nghệ thế giới mới TECHNO
+                            </p>
+                            <p className="text-sm text-gray-600">Số điện thoại: 0978 534 561</p>
+                        </div>
+                    </div>
+                    <div className="w-2/3 p-4">
+                        <div className="mb-4">
+                            <h3 className="text-lg font-semibold">THÔNG TIN LIÊN HỆ</h3>
+                            <div className="flex items-center mt-2">
+                                <i className="fas fa-user text-gray-600"></i>
+                                <p className="text-sm text-gray-600 ml-2">02/07/1993</p>
+                            </div>
+                            <div className="flex items-center mt-2">
+                                <i className="fas fa-phone text-gray-600"></i>
+                                <p className="text-sm text-gray-600 ml-2">0985431655</p>
+                            </div>
+                            <div className="flex items-center mt-2">
+                                <i className="fas fa-envelope text-gray-600"></i>
+                                <p className="text-sm text-gray-600 ml-2">Nguyendinhlap@gmail.com</p>
+                            </div>
+                            <div className="flex items-center mt-2">
+                                <i className="fas fa-map-marker-alt text-gray-600"></i>
+                                <p className="text-sm text-gray-600 ml-2">Đại Vũ, Huyện Âu, Đà Nẵng</p>
+                            </div>
+                        </div>
+                        <div className="mb-4">
+                            <h3 className="text-lg font-semibold">MỤC TIÊU NGHỀ NGHIỆP</h3>
+                            <p className="text-sm text-gray-600 mt-2">
+                                Có một công việc ổn định, trở thành nhân viên xuất sắc, tích lũy thêm nhiều kinh nghiệm,
+                                rèn luyện kỹ năng để công việc hiệu quả, chính xác, nhanh chóng.
+                            </p>
+                        </div>
+                        <div className="mb-4">
+                            <h3 className="text-lg font-semibold">TRÌNH ĐỘ HỌC VẤN</h3>
+                            <p className="text-sm text-gray-600 mt-2">Trường Đại học Sư phạm Kỹ Thuật</p>
+                            <p className="text-sm text-gray-600">Chuyên ngành Mạng máy tính</p>
+                            <p className="text-sm text-gray-600">Tốt nghiệp loại giỏi</p>
+                            <p className="text-sm text-gray-600">Điểm trung bình: 8.2</p>
+                        </div>
+                        <div className="mb-4">
+                            <h3 className="text-lg font-semibold">KINH NGHIỆM LÀM VIỆC</h3>
+                            <p className="text-sm text-gray-600 mt-2">Công ty Hỗ trợ IT – Công nghệ thế giới mới
+                                TECHNO</p>
+                            <p className="text-sm text-gray-600">Thời gian: 01/2016 - nay</p>
+                            <p className="text-sm text-gray-600">Vị trí: Nhân viên IT hỗ trợ kỹ thuật</p>
+                            <p className="text-sm text-gray-600">
+                                Bảo trì sửa chữa thiết bị, vật tư văn phòng, phần cứng máy tính, giải đáp thắc mắc với
+                                khách hàng về dịch vụ
+                            </p>
+                        </div>
+                        <div className="mb-4">
+                            <h3 className="text-lg font-semibold">HOẠT ĐỘNG</h3>
+                            <p className="text-sm text-gray-600 mt-2">
+                                Tham gia chiến dịch Mùa hè xanh, sửa chữa máy tính miễn phí cho các bạn sinh viên nghèo
+                            </p>
+                        </div>
+                        <div className="mb-4">
+                            <h3 className="text-lg font-semibold">DỰ ÁN THAM GIA</h3>
+                            <p className="text-sm text-gray-600 mt-2">
+                                Dự án Nhà lắp trên vầng sáng tạo lương lai được thực hiện tại Công ty Hỗ trợ IT – Công
+                                nghệ TECHNO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

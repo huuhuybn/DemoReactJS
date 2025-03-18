@@ -1,125 +1,146 @@
-/* Tổng thể */
-.App {
+/* App.css */
+body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
-  position: relative;
-  background: #2c3e50;
-  color: #fff;
+}
+
+.background-image {
+  background-image: url('https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat-y;
+  height: 100%;  /* Ensure the background covers the entire viewport height */
+}
+
+.max-w-4xl {
+  max-width: 1024px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.overflow-hidden {
   overflow: hidden;
 }
 
-/* Hiệu ứng lá rơi */
-@keyframes fall {
-  0% {
-    transform: translateY(-100px) rotate(0deg);
-  }
-  100% {
-    transform: translateY(100vh) rotate(360deg);
-  }
+.p-4 {
+  padding: 1rem;
 }
 
-.falling-leaf {
-  position: absolute;
-  top: -10%;
-  z-index: 1;
-  animation: fall 6s linear infinite;
-  opacity: 0.8;
+.flex {
+  display: flex;
 }
 
-.falling-leaf:nth-child(odd) {
-  left: 10%;
-  animation-duration: 7s;
-  animation-delay: 1s;
+.w-1/3 {
+  width: 33.33%;
 }
 
-.falling-leaf:nth-child(even) {
-  left: 80%;
-  animation-duration: 5s;
-  animation-delay: 2s;
+.w-2/3 {
+  width: 66.66%;
 }
 
-/* Hiệu ứng viễn tưởng - các điểm sáng */
-@keyframes sparkle {
-  0% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
+.bg-gray-200 {
+  background-color: #edf2f7;
 }
 
-.sparkle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  background-color: #ffeb3b;
-  border-radius: 50%;
-  animation: sparkle 2s ease-in-out infinite;
+.p-4 {
+  padding: 1rem;
 }
 
-.sparkle:nth-child(odd) {
-  animation-duration: 3s;
-  animation-delay: 1s;
-}
-
-.sparkle:nth-child(even) {
-  animation-duration: 4s;
-  animation-delay: 2s;
-}
-
-/* Hiệu ứng nền */
-@keyframes space-background {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-}
-
-.App {
-  background: radial-gradient(circle, #1a1a2e, #16213e, #0f3460);
-  animation: space-background 30s infinite linear;
-}
-
-/* Các phần tử khác */
-h1, h2 {
+.text-center {
   text-align: center;
 }
 
-h2 {
-  color: #f39c12;
+.text-xl {
+  font-size: 1.25rem;
 }
 
-section {
-  margin-bottom: 20px;
+.font-bold {
+  font-weight: bold;
 }
 
-ul {
-  list-style-type: none;
-  padding-left: 0;
+.text-sm {
+  font-size: 0.875rem;
 }
 
-ul li {
-  margin: 5px 0;
+.text-gray-600 {
+  color: #4a5568;
 }
 
-a {
-  text-decoration: none;
-  color: #3498db;
+.mt-4 {
+  margin-top: 1rem;
 }
 
-a:hover {
-  text-decoration: underline;
+.text-lg {
+  font-size: 1.125rem;
 }
 
+.font-semibold {
+  font-weight: 600;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.fas {
+  font-size: 1.25rem;
+  color: #4a5568;
+}
+
+.border-4 {
+  border-width: 4px;
+}
+
+.border-white {
+  border-color: white;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-gray-600 {
+  color: #4a5568;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+/* Add specific media queries for responsive design if needed */
+@media (max-width: 768px) {
+  .w-1/3, .w-2/3 {
+  width: 100%;
+}
+}
